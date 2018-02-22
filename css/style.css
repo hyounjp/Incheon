@@ -21,6 +21,11 @@ input, select {
   border: #a6a6a6 solid 1px;
 }
 
+button {
+  border: 0;
+  background: transparent;
+}
+
 select {
   cursor: pointer;
   appearance:none;
@@ -42,6 +47,7 @@ select::-ms-expand{
 a, a:hover, a:focus {
   text-decoration: none;
   outline: none;
+  color:#000;
 }
 
 b {
@@ -901,11 +907,6 @@ aside {
   cursor: pointer;
 }
 
-.popup-content th, td, tr {
-  vertical-align: middle;
-  text-align: center;
-}
-
 .popup {
   display: none;
   position:absolute;
@@ -1387,6 +1388,7 @@ aside {
   font-size: 15px;
   text-align: center;
   line-height: 30px;
+  cursor: pointer;
 }
 
 .board-list {
@@ -1400,7 +1402,6 @@ aside {
   padding: 13px;
   border-right: 1px solid #d0d5d6;
   border-top: 1px solid #d0d5d6;
-  vertical-align: middle;
 }
 
 .board-list td:last-child, .board-list th:last-child {
@@ -1428,4 +1429,42 @@ aside {
   text-align: center;
   margin: 0 auto;
   margin-top: 52px;
+}
+
+
+/* 공지사항 상세 */
+
+.notice-view{
+  width: 100%;
+  font-size:13px;
+}
+
+.notice-view thead th {
+  height: 45px;
+  border-top: 2px solid #539bec;
+  border-bottom: 1px solid #539bec;
+  font-size:15px;
+  font-weight: bold;
+
+}
+
+.notice-view tbody th,
+.notice-view tbody td {
+  border-bottom: 1px solid #d0d5d6;
+  padding : 10px;
+}
+
+.notice-view tbody th {
+  background-color : #f4f5f9;
+  width: 115px;
+}
+
+.notice-view tbody td {
+  text-align: left;
+  padding-left:15px;
+}
+
+
+.notice-view.order {
+  border-top : 1px solid #d0d5d6;
 }
