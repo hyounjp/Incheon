@@ -1,4 +1,18 @@
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@font-face{
+	font-family:'Nanum Gothic';
+	font-style:normal;
+	font-weight:400;
+	src:url('../font/NanumGothic-Regular.eot');
+	src:url('../font/NanumGothic-Regular.woff') format('woff'),
+	url('../font/NanumGothic-Regular.ttf') format('truetype');}
+@font-face{
+	font-family:"나눔고딕";
+	font-style:normal;
+	font-weight:bold;
+	src:url('../font/NanumGothic-Bold.eot');
+	src:url('../font/NanumGothic-Bold.woff') format('woff'),
+	url('../font/NanumGothic-Bold.ttf') format('truetype');}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -291,11 +305,8 @@ header {
 .legend th span {
   display: inline-block;
   vertical-align: middle;
-  height: 19px;
-}
-
-.legend th span:first-child {
   width: 19px;
+  height: 19px;
   border-radius: 10px;
   margin-right: 5px;
 }
