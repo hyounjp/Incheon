@@ -1339,3 +1339,93 @@ aside {
   height: 700px;
   background-color: gray;
 }
+
+
+/* 공지사항 - 안노라*/
+
+.search {
+  height: 51px;
+  width: 100%;
+  background: #f6f6f6;
+  border: 1px solid #d0d5d6;
+  margin-top: 36px;
+  margin-bottom: 18px;
+  padding-top: 9px;
+  position: relative;
+}
+
+.search-align {
+  position: absolute;
+  right: 9px;
+}
+
+.notice-select {
+  width: 105px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid #d0d5d6;
+  appearance: menulist;
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  -o-appearance: menulist;
+}
+
+.notice-input {
+  width: 218px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid #d0d5d6;
+}
+
+.notice-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 83px;
+  height: 30px;
+  background: #5371ad;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.board-list {
+  width: 100%;
+  border-top: 2px solid #539bec;
+  border-bottom: 1px solid #539bec;
+  font-size: 14px;
+}
+
+.board-list td, .board-list th {
+  padding: 13px;
+  border-right: 1px solid #d0d5d6;
+  border-top: 1px solid #d0d5d6;
+  vertical-align: middle;
+}
+
+.board-list td:last-child, .board-list th:last-child {
+  border-right: none;
+}
+
+.board-list number {
+  border-right: 1px solid #d0d5d6;
+  width: 83px;
+}
+
+.board-list td.board-list-title {
+  text-align: left;
+}
+
+.board-list tbody tr:nth-child(even), .board-list thead tr {
+  background-color: #f4f5f9;
+}
+
+.notice-page {
+  width: 26px;
+  height: 26px;
+  background: #d7d5d5;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 52px;
+}

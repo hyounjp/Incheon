@@ -161,15 +161,29 @@
   .popup-content {
     height: 200px;
   }
-
-
-
 }
 
 @media screen and (max-width: 480px) {
 
   .icon-box li>a {
     font-size:13px;
+  }
+  /* 안노라 작성 */
+  .search {
+    height: auto;
+    ;
+    padding: 10px;
+  }
+  .search-align {
+    position: relative;
+    right: 0;
+  }
+  .notice-select, .notice-input, .notice-btn {
+    width: 100%;
+  }
+  .notice-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
 }
