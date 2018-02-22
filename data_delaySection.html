@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!-- saved from url=(0013)about:internet -->
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1, minimum-scale=1">
+  <title>인천교통정보센터</title>
+  <meta name="description" content="인천교통정보센터 홈페이지">
+  <meta name="keywords" content="인천교통정보센터, 교통정보, 대시민서비스">
+  <!-- insert favicon
+  <link rel="shortcut icon" href="images/favicon">
+  -->
+  <link rel="stylesheet" media="screen" href="css/html5Reset.css">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+  <link rel="stylesheet" media="screen" href="css/style-responsive.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/common.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-top">
+    </div>
+    <div class="header-bottom">
+      <nav class="gnb clear">
+        <div class="logo">
+          <a href="index.html"></a>
+        </div>
+
+        <ul class="menu-list clear">
+          <li class="menu-item menu01">
+            <a href="trafficInfo.html"><span>교통정보</span></a>
+          </li>
+
+          <li class="menu-item menu02">
+            <a href="#"><span>교통데이터분석</span></a>
+            <ul class="submenu">
+              <li><a href="data_accidentByYear.html">년도별 교통사고 추이</a></li>
+              <li><a href="data_accidentMap.html">교통사고 다발지역</a></li>
+              <li class="no_bdr_b"><a href="data_delaySection.html">상습 정체구간</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-item menu03">
+            <a href="notice.html"><span>공지사항</span></a>
+          </li>
+
+          <li class="menu-item menu04">
+            <a href="centerInfo.html"><span class="no_bdr_r">센터소개</span></a>
+          </li>
+        </ul>
+
+        <!-- 모바일 메뉴 아이콘 -->
+        <div class="m-header">
+        </div>
+
+      </nav>
+    </div>
+
+    <!--모바일 메뉴-->
+    <div class="nav">
+      <!-- <h3>MENU</h3> -->
+      <ul>
+        <li>
+          <a href="trafficInfo.html">교통정보</a>
+        </li>
+        <li class="depth1-2">
+          <a href="#">교통데이터분석</a>
+          <ul class="depth2">
+            <li><a href="data_accidentByYear.html">년도별 교통사고 추이</a></li>
+            <li><a href="data_accidentMap.html">교통사고 다발지역</a></li>
+            <li><a href="data_delaySection.html">상습 정체구간</a></li>
+          </ul>
+        </li>
+        <li><a href="notice.html">공지사항</a></li>
+        <li><a href="centerInfo.html">센터소개</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 서브화면 타이틀  -->
+  <nav class="title">
+    <div class="title-inner">
+      <span class="icon home"></span>
+      <span class="icon next"></span>
+      <span class="depth1">교통데이터분석</span>
+      <span class="icon next"></span>
+      <span class="depth2">상습정체구간</span>
+    </div>
+    <div class="tab-button"></div>
+  </nav>
+
+  <section id="container" class="clear">
+    <!--sidebar start-->
+    <aside>
+      <div class="fa-bars-arrow" data-placement="right"><img src="images/toggle_left_panel_btn.png" alt="메뉴화살표 버튼"></div>
+      <div id="sidebar">
+        <div class="datacontent">
+          <div class="search-area">
+            <input class="accident-input" type="text" name="usrname" placeholder="도로명을 입력해주세요.">
+            <div class="search-btn"></div>
+          </div>
+          <div class="list-result-area delay">
+            <ul>
+              <li>
+                <p><b>경원로</b></p>
+                <p>(굴다리오거리-외암도사거리)</p>
+              </li>
+              <li>
+                <p><b>인주로</b></p>
+                <p>(치야고개삼거리-능암삼거리)</p>
+              </li>
+              <li>
+                <p><b>경원로</b></p>
+                <p>(외암도사거리-굴다리오거리)</p>
+              </li>
+              <li>
+                <p><b>장제로</b></p>
+                <p>(임학사거리-간석사거리)</p>
+              </li>
+              <li>
+                <p><b>남동로</b></p>
+                <p>(간석오거리-외암삼삼거리)</p>
+              </li>
+              <li>
+                <p><b>인주로</b></p>
+                <p>(능암삼거리-외암도사거리)</p>
+              </li>
+              <li>
+                <p><b>지방도제305호선</b></p>
+                <p>(가정1동범우연립-인천_김포경계1)</p>
+              </li>
+              <li>
+                <p><b>지방도제307호선</b></p>
+                <p>(인천_김포경계3-부평IC진출))</p>
+              </li>
+              <li>
+                <p><b>봉수대길</b></p>
+                <p>(해병검문소삼거리-송림사거리)</p>
+              </li>
+              <li>
+                <p><b>비류길</b></p>
+                <p>(주적골삼거리-옹암사거리)</p>
+              </li>
+              <li>
+                <p><b>지방도제307호선</b></p>
+                <p>(부평IC진입-인천_김포경계3)</p>
+              </li>
+              <li>
+                <p><b>경명로</b></p>
+                <p>(인천_부천경계6-정수개발)</p>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!--main content start-->
+    <section id="main-content">
+      <div>지도영역</div>
+
+      <!-- 범례 -->
+      <div class="comment">
+        <table class="legend accident">
+          <tbody>
+            <tr>
+              <th><span class="red"></span>상습정체구간</th>
+            </tr>
+          </tbody>
+        </table>
+        <div class="comment-accident">
+          상습정체구간은 구간별 정체가 하루 총 2시간 이상 정체되면서 월 10회 이상 발생된 도로구간을 말합니다.
+        </div>
+
+      </div>
+
+
+      <div class="marker" data-popup-open="popup-1"></div>
+    </section>
+  </section>
+  <footer>
+    <div class="footer-area">
+      <div class="footer-text">
+        인천광역시 남동구 경인로 680번길 25 (간석3동 67-11) | 교통안내 (관제실) 032-455-2153 | 신호등 고장 032-864-6805 | FAX : 032-440-8674
+      </div>
+    </div>
+  </footer>
+  <script>
+    function mapInfo(evt, mapInfo) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(mapInfo).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+
+</html>

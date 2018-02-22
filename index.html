@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!-- saved from url=(0013)about:internet -->
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1, minimum-scale=1">
+  <title>인천교통정보센터</title>
+  <meta name="description" content="인천교통정보센터 홈페이지">
+  <meta name="keywords" content="인천교통정보센터, 교통정보, 대시민서비스">
+  <!-- insert favicon
+  <link rel="shortcut icon" href="images/favicon">
+  -->
+  <link rel="stylesheet" media="screen" href="css/html5Reset.css">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+  <link rel="stylesheet" media="screen" href="css/style-responsive.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/common.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-top">
+    </div>
+    <div class="header-bottom">
+      <nav class="gnb clear">
+        <div class="logo">
+          <a href="index.html"></a>
+        </div>
+
+        <ul class="menu-list clear">
+          <li class="menu-item menu01">
+            <a href="trafficInfo.html"><span>교통정보</span></a>
+          </li>
+
+          <li class="menu-item menu02">
+            <a href="#"><span>교통데이터분석</span></a>
+            <ul class="submenu">
+              <li><a href="data_accidentByYear.html">년도별 교통사고 추이</a></li>
+              <li><a href="data_accidentMap.html">교통사고 다발지역</a></li>
+              <li class="no_bdr_b"><a href="data_delaySection.html">상습 정체구간</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-item menu03">
+            <a href="notice.html"><span>공지사항</span></a>
+          </li>
+
+          <li class="menu-item menu04">
+            <a href="centerInfo.html"><span class="no_bdr_r">센터소개</span></a>
+          </li>
+        </ul>
+
+        <!-- 모바일 메뉴 아이콘 -->
+        <div class="m-header">
+        </div>
+
+      </nav>
+    </div>
+
+    <!--모바일 메뉴-->
+    <div class="nav">
+      <!-- <h3>MENU</h3> -->
+      <ul>
+        <li>
+          <a href="trafficInfo.html">교통정보</a>
+        </li>
+        <li class="depth1-2">
+          <a href="#">교통데이터분석</a>
+          <ul class="depth2">
+            <li><a href="data_accidentByYear.html">년도별 교통사고 추이</a></li>
+            <li><a href="data_accidentMap.html">교통사고 다발지역</a></li>
+            <li><a href="data_delaySection.html">상습 정체구간</a></li>
+          </ul>
+        </li>
+        <li><a href="notice.html">공지사항</a></li>
+        <li><a href="centerInfo.html">센터소개</a></li>
+      </ul>
+    </div>
+
+  </header>
+
+  <main class="wrapper">
+    <div id="map" class="map">
+      <!-- 범례-->
+      <table class="legend">
+        <thead>
+          <tr>
+            <th></th>
+            <th><span class="green"></span>원활</th>
+            <th><span class="yellow"></span>서행</th>
+            <th><span class="red"></span>정체</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>일반도로</td>
+            <td>20km/h이상</td>
+            <td>10-20km/h</td>
+            <td>10km/h미만</td>
+          </tr>
+          <tr>
+            <td>도시고속도로</td>
+            <td>50km/h이상</td>
+            <td>30-50km/h</td>
+            <td>30km/h미만</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ul class="icon-box clear">
+      <li>
+        <span>교통정보 바로가기<span class="icon-quickmenu"></span></span>
+      </li>
+      <li>
+        <a href="trafficInfo.html" class="icon-caution">돌발정보</a>
+      </li>
+      <li>
+        <a href="trafficInfo.html" class="icon-cctv">CCTV</a>
+      </li>
+      <li>
+        <a href="trafficInfo.html" class="icon-vms">VMS</a>
+      </li>
+      <li>
+        <a href="trafficInfo.html" class="icon-parking">주차장</a>
+      </li>
+    </ul>
+
+    <section class="contents-wrapper clear">
+      <article class="realtime">
+        <h2 class="contents-title">
+          <span class="title-text">소통정보</span>
+          <a class="title-btn" href="">
+            <img src="images/icon_refresh.png" alt="새로고침">
+          </a>
+        </h2>
+        <div class="contents-inner no_bdr_l">
+          <ul class="list">
+            <li>
+              <span class="icon red">정체</span>
+              <span class="text">[부개사거리 ~ 인천 가구공단 목화 산업]</span>
+            </li>
+            <li>
+              <span class="icon red">정체</span>
+              <span class="text">[시흥IC 진출 ~ 시흥IC 진입]</span>
+            </li>
+            <li>
+              <span class="icon yellow">서행</span>
+              <span class="text">[일직JC 서해안진출 ~ 일직JC 제2경인진입]</span>
+            </li>
+            <li>
+              <span class="icon red">정체</span>
+              <span class="text">[도화IC 진출 ~ 도화IC 진입]</span>
+            </li>
+            <li>
+              <span class="icon green">원활</span>
+              <span class="text">[김포IC 진입 ~ 신곡사거리]</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="caution">
+        <h2 class="contents-title ">
+          <span class="title-text">돌발정보</span>
+          <a class="title-btn" href="">
+            <img src="images/icon_more.png" alt="더보기">
+          </a>
+        </h2>
+        <div class="contents-inner">
+          <ul class="list">
+            <li>
+              <a href="">[사고-긴급] 무네미로 장수고가교에서 서창분기점 방향 사고 발생</a><span>2018-02-06 10:32</span>
+            </li>
+            <li>
+              <a href="">[사고-최초] 경부고속도로 서울방향, 양재부근 2,3차로 충돌 사고</a><span>2018-02-05 21:30</span>
+            </li>
+            <li>
+              <a href="">[사고-최초] 경부고속도로 부산방향, 반포나들목 진입로에서 승용차 추돌 사고</a><span>2018-01-05 10:10</span>
+            </li>
+            <li>
+              <a href="">[사고-긴급] 서울외곽순환고속도로 판교방향, 중동나들목 진입로에서 3중 충돌 사고</a><span>2017-12-27 17:00</span>
+            </li>
+            <li>
+              <a href="">[사고-최초] 소래로 남동구 청 사거리에서 고래포구 사거리 방향 사고 발생</a><span>2017-12-27 16:37</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+
+      <article class="notice">
+        <h2 class="contents-title">
+          <span class="title-text">공지사항</span>
+          <a class="title-btn" href="notice.html">
+            <img src="images/icon_more.png" alt="더보기">
+          </a>
+        </h2>
+        <div class="contents-inner">
+          <ul class="list">
+            <li>
+              <a href="">[버스안내] 2월 6일(화)중앙버스전용차로 개통 안내</a><span>2018-02-06</span>
+            </li>
+            <li>
+              <a href="">[버스안내] 2월 5일(월)마을버스 정류소 신설 안내</a><span>2018-02-05</span>
+            </li>
+            <li>
+              <a href="">[버스안내] 1월 5일(금)인천버스 정류소 신설 안내</a><span>2018-01-05</span>
+            </li>
+            <li>
+              <a href="">[버스안내] 1월 1일(월) 해맞이 행사 관련 순환버스 안내</a><span>2017-12-27</span>
+            </li>
+            <li>
+              <a href="">[버스안내] 인천시 시내버스 정류소 명칭변경 안내</a><span>2017-12-27</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="twitter">
+        <h2 class="contents-title">
+          <span class="title-text">교통트위터</span>
+          <a class="title-btn" href="https://mobile.twitter.com/poltra032" target="_blank">
+            <img src="images/icon_more.png" alt="더보기">
+          </a>
+        </h2>
+        <div class="contents-inner twitter-img">
+        </div>
+      </article>
+    </section>
+    <div class="banner clear">
+      <div class="banner-title">
+        <span>함께하는 기관</span>
+      </div>
+
+      <div id="banner_container" class="banner-container">
+        <script>
+          var sliderwidth = "100%";
+          var sliderheight = "43px" //스크롤 세로 사이즈
+          var slidespeed = "1"
+          var slidebgcolor = "#ffffff" //스크롤 배경 색상
+
+          var leftrightslide = new Array()
+          var finalslide = ''
+          leftrightslide[0] = "<a href='https://www.kobus.co.kr' target=_blank><img src='images/banner_01.jpg' alt='전국고속버스운송사업조합'></a>";
+          leftrightslide[1] = "<a href='https://no-driving.incheon.go.kr' target=_blank><img src='images/banner_02.jpg' alt='인천승용차선택요일제'></a>";
+          leftrightslide[2] = "<a href='#' target=_blank><img src='images/banner_03.jpg' alt='인천광역시'></a>";
+          leftrightslide[3] = "<a href='https://www.airport.kr' target=_blank><img src='images/banner_04.jpg' alt='인천국제공항'></a>";
+          leftrightslide[4] = "<a href='https://www.icpa.or.kr' target=_blank><img src='images/banner_05.jpg' alt='인천항만공사'></a>";
+          leftrightslide[5] = "<a href='http://www.ictr.or.kr' target=_blank><img src='images/banner_06.jpg' alt='인천교통공사'></a>";
+
+          var imagegap = ""
+          var slideshowgap = 0
+
+          var copyspeed = slidespeed
+
+          leftrightslide = '<nobr>' + leftrightslide.join(imagegap) + '</nobr>'
+
+          var iedom = document.all || document.getElementById
+
+          if (iedom)
+            document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">' + leftrightslide + '</span>')
+
+          var actualwidth = ''
+          var cross_slide, ns_slide
+          var righttime, lefttime
+
+          function fillup() {
+            if (iedom) {
+              cross_slide = document.getElementById ? document.getElementById("test2") : document.all.test2
+              cross_slide2 = document.getElementById ? document.getElementById("test3") : document.all.test3
+              cross_slide.innerHTML = cross_slide2.innerHTML = leftrightslide
+              actualwidth = document.all ? cross_slide.offsetWidth : document.getElementById("temp").offsetWidth
+              cross_slide2.style.left = actualwidth + slideshowgap + "px"
+            } else if (document.layers) {
+              ns_slide = document.ns_slidemenu.document.ns_slidemenuorange
+              ns_slide2 = document.ns_slidemenu.document.ns_slidemenu3
+              ns_slide.document.write(leftrightslide)
+              ns_slide.document.close()
+              actualwidth = ns_slide.document.width
+              ns_slide2.left = actualwidth + slideshowgap
+              ns_slide2.document.write(leftrightslide)
+              ns_slide2.document.close()
+            }
+            lefttime = setInterval("slideleft()", 30)
+          }
+          window.onload = fillup
+
+          function slideleft() {
+            if (iedom) {
+              if (parseInt(cross_slide.style.left) > (actualwidth * (-1) + 8))
+                cross_slide.style.left = parseInt(cross_slide.style.left) - copyspeed + "px"
+              else
+                cross_slide.style.left = parseInt(cross_slide2.style.left) + actualwidth + slideshowgap + "px"
+              if (parseInt(cross_slide2.style.left) > (actualwidth * (-1) + 8))
+                cross_slide2.style.left = parseInt(cross_slide2.style.left) - copyspeed + "px"
+              else
+                cross_slide2.style.left = parseInt(cross_slide.style.left) + actualwidth + slideshowgap + "px"
+            } else if (document.layers) {
+              if (ns_slide.left > (actualwidth * (-1) + 8))
+                ns_slide.left -= copyspeed
+              else
+                ns_slide.left = ns_slide2.left + actualwidth + slideshowgap
+              if (ns_slide2.left > (actualwidth * (-1) + 8))
+                ns_slide2.left -= copyspeed
+              else
+                ns_slide2.left = ns_slide.left + actualwidth + slideshowgap
+            }
+          }
+
+          function slideright() {
+            if (iedom) {
+              if (parseInt(cross_slide.style.left) < (actualwidth + 8))
+                cross_slide.style.left = parseInt(cross_slide.style.left) + copyspeed + "px"
+              else
+                cross_slide.style.left = parseInt(cross_slide2.style.left) + actualwidth * (-1) + slideshowgap + "px"
+              if (parseInt(cross_slide2.style.left) < (actualwidth + 8))
+                cross_slide2.style.left = parseInt(cross_slide2.style.left) + copyspeed + "px"
+              else
+                cross_slide2.style.left = parseInt(cross_slide.style.left) + actualwidth * (-1) + slideshowgap + "px"
+            } else if (document.layers) {
+              if (ns_slide.left > (actualwidth * (-1) + 8))
+                ns_slide.left -= copyspeed
+              else
+                ns_slide.left = ns_slide2.left + actualwidth + slideshowgap
+              if (ns_slide2.left > (actualwidth * (-1) + 8))
+                ns_slide2.left -= copyspeed
+              else
+                ns_slide2.left = ns_slide.left + actualwidth + slideshowgap
+            }
+          }
+
+          function right() {
+            if (lefttime) {
+              clearInterval(lefttime)
+              clearInterval(righttime)
+              righttime = setInterval("slideright()", 30)
+            }
+          }
+
+          function left() {
+            if (righttime) {
+              clearInterval(lefttime)
+              clearInterval(righttime)
+              lefttime = setInterval("slideleft()", 30)
+            }
+          }
+          document.write('<div width=' + sliderwidth + ' border="0" cellspacing="0" cellpadding="0" background=/images/site_bg.gif>');
+
+          if (iedom || document.layers) {
+            with(document) {
+              document.write('<td>')
+              if (iedom) {
+                write('<div style="position:relative;width:' + sliderwidth + ';height:' + sliderheight + ';overflow:hidden">')
+                write('<div style="position:absolute;width:' + sliderwidth + ';height:' + sliderheight + ';background-color:' + slidebgcolor + '" onMouseover="copyspeed=0" onMouseout="copyspeed=1">')
+                write('<div id="test2" style="position:absolute;left:0px;top:0px"></div>')
+                write('<div id="test3" style="position:absolute;left:-1000px;top:0px"></div>')
+                write('</div></div>')
+              } else if (document.layers) {
+                write('<ilayer width=' + sliderwidth + ' height=' + sliderheight + ' name="ns_slidemenu" bgColor=' + slidebgcolor + '>')
+                write('<layer name="ns_slidemenuorange" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+                write('<layer name="ns_slidemenu3" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+                write('</ilayer>')
+              }
+              document.write('</td>')
+            }
+          }
+          document.write('</div>')
+        </script>
+      </div>
+      <!-- banner_container /-->
+
+      <div class="banner-btn">
+        <img src="images/btn_left.jpg" alt="배너왼쪽이동" onmouseover="left(); copyspeed=2" onmouseout="copyspeed=1">
+      </div>
+      <div class="banner-btn">
+        <img src="images/btn_right.jpg" alt="배너오른쪽이동" onmouseover="right();copyspeed=2" onmouseout="copyspeed=1">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-area">
+      <div class="footer-text">
+        인천광역시 남동구 경인로 680번길 25 (간석3동 67-11) | 교통안내 (관제실) 032-455-2153 | 신호등 고장 032-864-6805 | FAX : 032-440-8674
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

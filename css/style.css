@@ -1,0 +1,1341 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+input, select {
+  width: 100%;
+  height: 100%;
+  padding-left :10px;
+  color: #000;
+  font-size: 12px;
+  font-family: 'Nanum Gothic', sans-serif;
+  background: transparent;
+  outline: none;
+  border: #a6a6a6 solid 1px;
+}
+
+select {
+  cursor: pointer;
+  appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-o-appearance:none;
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+b {
+  font-weight: bold;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  background-color: #f1f6fa;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 16px;
+}
+
+header {
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  min-width: 320px;
+  z-index: 999;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-top {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: #0079c2;
+}
+
+.header-bottom {
+  width: 100%;
+  height: 75px;
+  background-color: #fff;
+}
+
+.gnb {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: table;
+  float: left;
+  width: 375px;
+  height: 75px;
+  max-width: 375px;
+  min-width: 260px;
+  margin-right: 10px;
+}
+
+.logo a {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  background: url(../images/logo.jpg) no-repeat left center;
+  background-size: contain;
+}
+
+
+.menu-list, .submenu {
+  float: right;
+  width: calc(100% - 395px);
+  max-width: 640px;
+}
+
+.menu-item {
+  float: left;
+  width: 25%;
+}
+
+.menu-item>a {
+  display: block;
+  margin-top: 15px;
+  width: 100%;
+
+}
+
+.menu-item.on span {
+  color: #0079c2;
+}
+
+.menu-item span {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  border-right: 1px solid #dedede;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+  width:100%;
+  margin-top:15px;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-size : 14px;
+
+}
+.submenu li {
+  border-bottom : 1px solid #CCD4D6;
+  padding : 10px;
+}
+
+.submenu li a {
+  color:#121212;
+}
+
+.submenu li a:hover {
+  font-weight: bold;
+
+}
+
+
+
+/* 2018.01.15 모바일메뉴 */
+
+/* 오유정추가 css */
+
+.m-header {
+  display: none;
+  position: absolute;
+  right: 20px;
+  width: 20px;
+  height: 75px;
+  line-height: 75px;
+  cursor: pointer;
+  background:url(../images/m_menuicon.jpg) no-repeat center;
+}
+
+.m-header.open {
+  background-image: url(../images/m_menuicon_close.jpg);
+}
+
+/*nav*/
+
+.nav {
+  display: none;
+  position: absolute;
+  z-index: 99999;
+  width: 100%;
+  border-bottom: 1px solid #CCD4D6;
+}
+
+.nav h3 {
+  height: 35px;
+  line-height: 35px;
+  background: #017bc4;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nav ul li {
+  border-top: 1px solid #CCD4D6;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.nav ul li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+  color: #121212;
+  padding: 0 15px;
+}
+
+.nav .depth1-2>a {
+  background: url(../images/arrow_accorDown.png) right 15px center no-repeat;
+}
+
+.nav .depth1-2.on>a {
+  background: url(../images/arrow_accorUp.png) right 15px center no-repeat #ffffff;
+  font-weight: bold;
+  color: #017bc4;
+}
+
+.nav .depth2 {
+  display: none;
+}
+
+.nav .depth2 li {
+  background-color: #f2f2f2 !important;
+}
+
+.nav .depth2 li a {
+  color: #3d3d3d;
+  margin: 0 15px;
+}
+
+/*//nav*/
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top:101px;
+  overflow: hidden;
+}
+
+.map {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  background: url(../images/map.jpg) no-repeat center; /* 임시 이미지 삽입 */
+  background-size: cover;
+  border: 1px solid #b0b0b0;
+}
+
+.legend {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid #a6a6a6;
+  z-index: 101;
+  text-align: center;
+}
+
+.legend th {
+  padding: 5px;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.legend th span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 19px;
+  height: 19px;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.legend th .green {
+  background-color: #01c901;
+}
+
+.legend th .yellow {
+  background-color: #ffc930;
+}
+
+.legend th .red {
+  background-color: #ff0000;
+}
+
+.legend td {
+  border-top: 1px solid #a6a6a6;
+  padding: 5px 8px;
+  font-size: 11px;
+}
+
+.legend td:first-child{
+  padding-left:5px;
+  padding-right:5px;
+}
+
+.icon-box {
+  width: 100%;
+  margin-top: 15px;
+  border: 1px solid #b0b0b0;
+}
+
+.icon-box li {
+  float:left;
+  position: relative;
+  width: 238px;
+  height: 55px;
+  border-right: 1px solid #b0b0b0;
+  background-color: #fff;
+}
+
+.icon-box li:first-child{
+  width: 245px;
+  background-color: #dff0fa;
+}
+
+.icon-box li:last-child{
+  border-right: 0;
+}
+
+.icon-box li>a, .icon-box li>span{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width: 100%;
+  color:#000;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.icon-box li>span {
+  color: #0066b0;
+  font-size:16px;
+}
+
+
+.icon-quickmenu {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 19px;
+  margin-left: 18px;
+  background: url(../images/icon_quickmenu.png) no-repeat center;
+  background-size: contain;
+}
+
+.icon-box li>a::before{
+    content:"";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+.icon-caution::before{
+  background : url(../images/icon_caution.png) no-repeat center ;
+}
+
+.icon-cctv::before{
+  background : url(../images/icon_cctv.png) no-repeat center ;
+}
+
+.icon-vms::before{
+  background : url(../images/icon_vms.png) no-repeat center ;
+}
+
+.icon-parking::before{
+  background : url(../images/icon_parkinglot.png) no-repeat center ;
+}
+
+.contents-wrapper {
+  width: 100%;
+  margin: 15px 0;
+  border:1px solid #b0b0b0;
+}
+
+.contents-wrapper > article {
+  float:left;
+  width:25%;
+}
+.notice {
+  background-color: #5b5c60;
+}
+
+.realtime {
+  background-color: #1a959a;
+}
+
+.caution {
+  background-color: #1eb0d5;
+}
+
+.twitter {
+  background-color: #014282;
+}
+
+.contents-title {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 45px;
+}
+
+.title-text {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.title-btn {
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 5px;
+  margin-top: -20px;
+}
+
+.contents-inner {
+  position: relative;
+  width: 100%;
+  height: 165px;
+  background-color: #fff;
+  border-left : 1px solid #b0b0b0;
+}
+
+.list {
+  width: 100%;
+  padding: 0 5px;
+  font-size:12px;
+}
+
+.list li {
+  position: relative;
+  height: 33px;
+  padding-top:7px;
+  padding-bottom:7px;
+  border-bottom: 1px solid #b0b0b0;
+}
+
+.list li:last-child {
+  border-bottom: 0;
+}
+
+
+.realtime .list li .text {
+  display: block;
+  padding-left: 55px;
+  font-size: 12px;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.realtime .list li .icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0;
+  width: 45px;
+  transform: translateY(-50%);
+  padding: 2px 0;
+  text-align: center;
+  font-size: 11px;
+  border-radius: 50px;
+}
+
+.icon.red {
+  background-color: #fe0000;
+  color: #fff;
+}
+
+.icon.yellow {
+  background-color: #ffcc33;
+  color: #222;
+}
+
+.icon.green {
+  background-color: #00cd00;
+  color: #222;
+}
+
+.caution .list li a {
+  display: block;
+  padding-right: 105px;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.caution .list li span,
+.notice .list li span {
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: #222;
+}
+
+.notice .list li a {
+  display: block;
+  padding-right: 70px;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.twitter-img {
+  background: url(../images/twitter.jpg) no-repeat center #fff;
+  background-size : contain; /* 임시 이미지 삽입 */
+}
+
+.banner {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border: 1px solid #b0b0b0;
+}
+
+.banner-title {
+  float: left;
+  display: table;
+  width: 130px;
+  height: 100%;
+  background-color: #8e8e8e;
+}
+
+.banner-title span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.banner-container {
+  position: relative;
+  float: left;
+  width: calc(100% - 226px);
+}
+
+.banner-container a {
+  margin: 0 50px;
+}
+
+.banner-container img {
+  height: 45px;
+}
+
+.banner-btn {
+  position: relative;
+  float: left;
+  width: 48px;
+  height: 43px;
+  border-left: 1px solid #b0b0b0;
+  cursor: pointer;
+}
+
+.banner-btn img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+footer {
+  width: 100%;
+  min-width: 320px;
+  background-color: #4c4c4c;
+}
+
+.footer-area {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:14.5px;
+  overflow: hidden;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+}
+
+/* 교통정보 서브화면 */
+
+
+#container {
+  position: relative;
+  width: 100%;
+  height: 925px;
+}
+
+.title {
+  position: relative;
+  margin-top:85px;
+  width: 100%;
+  height: 30px;
+  font-size:12px;
+  background-color: #d0d6d6;
+  z-index: 998;
+}
+
+.title-inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title-inner span {
+  display: inline-block;
+  height: 30px;
+  line-height: 28px;
+  vertical-align: middle;
+}
+
+.title-inner .icon {
+  width: 18px;
+}
+
+.title-inner .icon.home {
+  background: url(../images/icon_title_home.png) no-repeat center;
+  background-size: contain;
+}
+
+.title-inner .icon.next {
+  background: url(../images/icon_title_left.png) no-repeat center;
+}
+
+.title-inner .depth1 {
+  color: #5b5c60;
+  font-weight: bold;
+}
+
+.title-inner .depth2 {
+  color: #000;
+  font-weight: bold;
+}
+
+.tab-button{
+  display: none;
+  position: absolute;
+  top:0;
+  bottom:0;
+  right: 0;
+  width:40px;
+  height: 30px;
+  background: url(../images/btn_tab_close.png) no-repeat center;
+  background-size: cover;
+
+}
+
+
+/* sidebar */
+
+aside {
+  position: relative;
+  float: left;
+  height: 100%;
+}
+
+#sidebar {
+  width: 400px;
+  height: 100%;
+  background: #f1f6fa;
+  border-right: 1px solid #a6a6a6;
+}
+
+.fa-bars-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -19px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Style the buttons inside the tab */
+
+.tab button {
+  display: block;
+  float: left;
+  width: 20%;
+  height: 60px;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #e0eaf3;
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  border-right: 1px solid #f1f6fa;
+}
+
+.tab button:last-child {
+  border-right: 0;
+}
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+  background-color: #f1f6fa;
+  color: #014284;
+}
+
+/* Style the tab content */
+
+.tabcontent {
+  display: none;
+  padding: 15px;
+  height: calc(100% - 60px);
+}
+
+.search-area {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+.map-input {
+  width: calc(100% - 64px);
+  background: #fff;
+}
+
+.search-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 64px;
+  height: 30px;
+  background: url(../images/btn_search.png) no-repeat center #3a3f55;
+  cursor: pointer;
+}
+
+.list-result-area {
+  background: #fff;
+  height: calc(100% - 45px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #4d4d4d;
+}
+
+.list-result-area>ul>li {
+  height: 30px;
+  line-height: 30px;
+  font-size:12px;
+  border-bottom: #dedede solid 1px;
+  cursor: pointer;
+  background: url(../images/bullet_green.png) no-repeat 8px 50%;
+  padding-left: 25px;
+}
+
+.list-result-area>ul>li:last-child {
+  border-radius: 0;
+}
+
+.list-result-area>ul>li:hover {
+  background: url(../images/bullet_navy.png) no-repeat 8px 50% #dbe9f4;
+}
+
+/* MAIN CONTENT CONFIGURATION */
+#main-content {
+  position: relative;
+  float: left;
+  background: #606b5a;
+  width: calc(100% - 400px);
+  height: 100%;
+}
+
+#main-content.sidebar-closed {
+  width: 100%;
+}
+
+
+.onoff{
+  position: absolute;
+  top:10px;
+  left:10px;
+  width:290px;
+  font-size: 12px;
+}
+
+.onoff-top{
+  width: 100%;
+  height: 25px;
+  border: 1px solid #a6a6a6;
+  background-color: #3a3f55;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color:#fff;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.onoff-bottom{
+  display: flex;
+  width: 100%;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #a6a6a6;
+  background-color: rgba(255,255,255,0.8);
+  border-top: 0 !important;
+}
+
+
+.checkbox{
+  flex:1;
+  margin-top: -4px;
+  text-align: center;
+
+}
+
+.checkbox .cb {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #767676;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  margin-right: 5px;
+}
+
+.cb::after {
+  position: absolute;
+  left:3px;
+  content:'';
+  width: 4px;
+  height: 7px;
+  border: solid #000;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox input[type="checkbox"] + .cb::after {
+  opacity: 0;
+}
+
+.checkbox input[type="checkbox"]:checked + .cb::after {
+  opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled .cb::after {
+  opacity: 0.5;
+}
+
+
+
+.marker {
+  position: absolute;
+  top:50%;
+  left:50%;
+  width: 40px;
+  height: 40px;
+  background: url(../images/marker.png) no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.popup-content th, td, tr {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.popup {
+  display: none;
+  position:absolute;
+  width: 400px;
+  height: 390px;
+  top:120px;
+  left:120px;
+  z-index: 101;
+  border:1px solid #a6a6a6;
+  background:#fff;
+}
+
+
+.popup-title{
+  position: relative;
+  display: table;
+  width:100%;
+  height: 35px;
+  background-color: #3a3f55;
+  color:#fff;
+  text-align: center;
+}
+
+.popup-close{
+  position: absolute;
+  display: block;
+  top:0;
+  right: 0;
+  width:35px;
+  height:35px;
+  background: url(../images/btn_popup_close.png) no-repeat center;
+}
+
+.popup-title span {
+  display: table-cell;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+
+.popup-content {
+  width:100%;
+  height: 350px;
+  padding : 15px;
+  overflow: auto;
+}
+
+.road-info {
+  width: 100%;
+  border: 1px solid #a6a6a6;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.road-info th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #dbe9f4;
+  color : #3a3f55;
+  font-weight: bold;
+  border: 1px solid #a6a6a6;
+}
+
+.road-info td {
+  border-right: 1px solid #a6a6a6;
+}
+
+.road-info .top{
+  padding-top:12px;
+}
+
+.road-info .bottom{
+  padding-bottom:12px;
+}
+
+.road-detail {
+  width:100%;
+  font-size: 13px;
+  border-collapse: collapse;
+}
+
+
+.road-detail th{
+  padding: 10px 0;
+  background: #dedede;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.road-detail td{
+  padding: 10px 0;
+}
+
+
+.road-detail .text {
+  width: 40%;
+}
+.road-detail .img {
+  width: 10%;
+}
+
+.road-detail .img.red-top {
+  background: url(../images/red_top_btn.png) no-repeat center;
+}
+
+.road-detail .img.red-bottom {
+  background: url(../images/red_bottom_btn.png) no-repeat center;
+}
+
+
+.road-detail .img.yellow-top {
+  background: url(../images/yellow_top_btn.png) no-repeat center;
+}
+
+.road-detail .img.yellow-bottom {
+  background: url(../images/yellow_bottom_btn.png) no-repeat center;
+}
+
+.road-detail .img.green-top {
+  background: url(../images/green_top_btn.png) no-repeat center;
+}
+
+.road-detail .img.green-bottom {
+  background: url(../images/green_bottom_btn.png) no-repeat center;
+}
+
+
+/* 교통데이터분석 - 교통사고 다발지역 */
+
+.datacontent{
+  padding:15px;
+  height: 100%;
+}
+
+.search-area.accident {
+  height: 70px;
+}
+
+.accident-input {
+  background: #fff;
+  height: 30px;
+  margin-bottom:10px;
+}
+
+.select-box {
+  position: absolute;
+  left:0;
+  bottom:0;
+  background: #fff;
+  width:calc(100% - 70px);
+  height: 30px;
+  z-index: 1;
+}
+
+.select-box:after {
+  content: "▼";
+  position: absolute;
+  line-height: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  top: 0px;
+  right:0;
+  width: 45px;
+  height: 30px;
+  background: #f0f0f0;
+  cursor: pointer;
+  border:1px solid #a6a6a6;
+  z-index: -1;
+}
+
+
+.list-result-area.accident {
+  height: calc( 100% - 85px);
+}
+
+.list-result-area.accident > ul > li {
+  position: relative;
+  padding:10px;
+  height: auto;
+  line-height: 20px;
+  padding-left : 25px;
+  background-position-y: 34%;
+}
+
+.acc-count {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right:20px;
+  font-weight: bold;
+  color:#3a3f55;
+}
+
+.comment {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+
+.legend.accident {
+  position: static;
+  display: inline-block;
+  vertical-align: top;
+  margin-top:5px;
+}
+
+.legend.accident th {
+  padding-left : 20px;
+  padding-right : 20px;
+}
+
+
+.comment-accident {
+  display: inline-block;
+  vertical-align: top;
+  margin-top:5px;
+  padding:7px;
+  border: 1px solid #a6a6a6;
+  font-size:12px;
+  background-color: rgba(255,255,255,0.8);
+}
+
+.popup.accident {
+  height: 175px;
+}
+
+.popup-content.accident{
+  height: 145px;
+}
+
+.road-info .acci{
+  padding-top:6px;
+  padding-bottom: 6px;
+}
+
+.road-detail .red{
+  color: #fe0000;
+  font-weight: bold;
+}
+
+/* 교통데이터분석 - 상습정체구간 */
+
+
+.list-result-area.delay {
+  height: calc( 100% - 45px);
+}
+
+.list-result-area.delay > ul > li {
+  position: relative;
+  padding:10px;
+  height: auto;
+  line-height: 20px;
+  padding-left : 25px;
+  background-position-y: 34%;
+}
+
+/* 센터 소개 */
+.wrapper-sub {
+  width: 100%;
+  padding-bottom: 80px;
+  background-color: #fff;
+}
+
+.title-sub{
+  width: 100%;
+  border-bottom: 1px solid #d1d5d8;
+  margin-bottom: 35px;
+}
+
+.title-sub-inner{
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top:25px;
+  padding-bottom: 10px;
+}
+
+.title-sub-inner>span{
+  align-self: flex-end;
+}
+
+.title-sub-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  background: url(../images/icon_title_sub.png) no-repeat center;
+}
+
+.title-sub-title {
+  display: inline-block;
+  color:#000;
+  font-size:23px !important;
+  font-weight: bold;
+
+}
+
+.title-sub-text {
+  display: inline-block;
+  font-size:13px;
+  margin: 5px 10px 0px 10px;
+
+}
+
+
+.wrapper-sub section {
+  width: 100%;
+  max-width:1200px;
+  margin: 0 auto;
+  margin-bottom : 20px;
+}
+
+.contents-header {
+  font-size: 15px;
+  color:#000;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.contents-header .icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  background: url(../images/bullet_slash.png) no-repeat center;
+  margin-right: 15px;
+}
+
+.wrap-gray {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #a6a6a6;
+  padding : 15px;
+  background-color: #f9f9f9;
+}
+
+.center-intro p {
+  display: block;
+  width: 80%;
+  margin : auto;
+  margin-bottom: 20px;
+  font-size: 15px;
+  text-align: justify;
+}
+
+.center-history {
+  width: 100%;
+  font-size: 15px;
+  border-top: 2px solid #539bed;
+}
+
+.center-history td {
+  padding: 10px;
+  border-bottom : 1px solid #d8d8d8;
+}
+
+
+.center-history th {
+  width: 19%;
+  min-width: 130px;
+  padding: 10px;
+  background-color: #f4f5f9;
+  border-right : 2px solid #d8d8d8;
+  border-bottom : 1px solid #d8d8d8;
+}
+
+.center-history ul {
+  font-size: 14px;
+}
+
+.font-navy{
+  color:#3a3f55
+}
+
+.center-works p {
+  width: 100%;
+  padding:0 30px;
+  margin-bottom:10px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.center-works b {
+  font-size:15px;
+}
+
+
+.center-organ img{
+  margin : 0 10%;
+}
+
+
+.center-map-wrap{
+  border-bottom:0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.center-map {
+  border: 1px solid #000;
+  width: 100%;
+  height: 375px;
+}
+
+/* 년도별 교통사고 통계 */
+
+
+.chart-info {
+  width: 100%;
+  padding : 15px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border : 1px solid #a6a6a6;
+  color:#4c4c4c;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.chart {
+  width: 100%;
+  height: 700px;
+  background-color: gray;
+}

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!-- saved from url=(0013)about:internet -->
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1, minimum-scale=1">
+  <title>인천교통정보센터</title>
+  <meta name="description" content="인천교통정보센터 홈페이지">
+  <meta name="keywords" content="인천교통정보센터, 교통정보, 대시민서비스">
+  <!-- insert favicon
+  <link rel="shortcut icon" href="images/favicon">
+  -->
+  <link rel="stylesheet" media="screen" href="css/html5Reset.css">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+  <link rel="stylesheet" media="screen" href="css/style-responsive.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/common.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-top">
+    </div>
+    <div class="header-bottom">
+      <nav class="gnb clear">
+        <div class="logo">
+          <a href="index.html"></a>
+        </div>
+
+        <ul class="menu-list clear">
+          <li class="menu-item menu01">
+            <a href="trafficInfo.html"><span>교통정보</span></a>
+          </li>
+
+          <li class="menu-item menu02">
+            <a href="#"><span>교통데이터분석</span></a>
+            <ul class="submenu">
+              <li><a href="data_accidentByYear.html">년도별 교통사고 추이</a></li>
+              <li><a href="data_accidentMap.html">교통사고 다발지역</a></li>
+              <li class="no_bdr_b"><a href="data_delaySection.html">상습 정체구간</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-item menu03">
+            <a href="notice.html"><span>공지사항</span></a>
+          </li>
+
+          <li class="menu-item menu04">
+            <a href="centerInfo.html"><span class="no_bdr_r">센터소개</span></a>
+          </li>
+        </ul>
+
+        <!-- 모바일 메뉴 아이콘 -->
+        <div class="m-header">
+        </div>
+
+      </nav>
+    </div>
+
+    <!--모바일 메뉴-->
+    <div class="nav">
+      <!-- <h3>MENU</h3> -->
+      <ul>
+        <li>
+          <a href="trafficInfo.html">교통정보</a>
+        </li>
+        <li class="depth1-2">
+          <a href="#">교통데이터분석</a>
+          <ul class="depth2">
+            <li><a href="data_accidentByYear.html">년도별 교통사고 추이</a></li>
+            <li><a href="data_accidentMap.html">교통사고 다발지역</a></li>
+            <li><a href="data_delaySection.html">상습 정체구간</a></li>
+          </ul>
+        </li>
+        <li><a href="notice.html">공지사항</a></li>
+        <li><a href="centerInfo.html">센터소개</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 서브화면 타이틀  -->
+  <nav class="title">
+    <div class="title-inner">
+      <span class="icon home"></span>
+      <span class="icon next"></span>
+      <span class="depth2">교통정보</span>
+    </div>
+    <div class="tab-button"></div>
+  </nav>
+
+  <section id="container" class="clear">
+    <!--sidebar start-->
+    <aside>
+      <div class="fa-bars-arrow" data-placement="right"><img src="images/toggle_left_panel_btn.png" alt="메뉴화살표 버튼"></div>
+      <div id="sidebar">
+        <div class="tab clear">
+          <button class="tablinks active" onclick="mapInfo(event, 'comm-info')">소통정보</button>
+          <button class="tablinks" onclick="mapInfo(event, 'unexpect-info')">돌발정보</button>
+          <button class="tablinks" onclick="mapInfo(event, 'parking-info')">주차장</button>
+          <button class="tablinks" onclick="mapInfo(event, 'cctv-info')">CCTV</button>
+          <button class="tablinks" onclick="mapInfo(event, 'vms-info')">VMS</button>
+        </div>
+
+        <!-- 소통정보 -->
+        <div id="comm-info" class="tabcontent" style="display: block;">
+          <div class="search-area">
+            <input class="map-input" type="text" name="usrname" placeholder="도로명을 입력해주세요.">
+            <div class="search-btn"></div>
+          </div>
+          <div class="list-result-area">
+            <ul>
+              <li>가구장2길</li>
+              <li>가재울길</li>
+              <li>가정로</li>
+              <li>가현길</li>
+              <li>간석길</li>
+              <li>간석역길</li>
+              <li>간석일방로</li>
+              <li>간석중앙로</li>
+              <li>갈월로</li>
+              <li>개흥새싹길</li>
+              <li>갯마을길</li>
+              <li>갱고지길</li>
+              <li>건지골2길</li>
+              <li>건지공원길</li>
+              <li>검단로</li>
+              <li>경원로</li>
+              <li>경인북1길</li>
+              <li>경인북4길</li>
+              <li>경인북5길</li>
+              <li>계산길</li>
+              <li>계산새길</li>
+              <li>계산천1길</li>
+              <li>계산천2길</li>
+              <li>계양구청길</li>
+              <li>계양로</li>
+              <li>고속도로동로</li>
+              <li>곡촌2길</li>
+              <li>공구3로</li>
+              <li>공구상가길</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 돌발정보 -->
+        <div id="unexpect-info" class="tabcontent" style="display: none;">
+          <div class="search-area">
+            <input class="map-input" type="text" name="usrname" placeholder="위치를 입력해주세요.">
+            <div class="search-btn"></div>
+          </div>
+          <div class="list-result-area">
+            <ul>
+              <li>test</li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 주차장 -->
+        <div id="parking-info" class="tabcontent" style="display: none;">
+          <div class="search-area">
+            <input class="map-input" type="text" name="usrname" placeholder="주차장 정보를 입력해주세요.">
+            <div class="search-btn"></div>
+          </div>
+          <div class="list-result-area">
+            <ul>
+              <li>test</li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CCTV -->
+        <div id="cctv-info" class="tabcontent" style="display: none;">
+          <div class="search-area">
+            <input class="map-input" type="text" name="usrname" placeholder="CCTV 정보를 입력해주세요.">
+            <div class="search-btn"></div>
+          </div>
+          <div class="list-result-area">
+            <ul>
+              <li>test</li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- VMS -->
+        <div id="vms-info" class="tabcontent" style="display: none;">
+          <div class="search-area">
+            <input class="map-input" type="text" name="usrname" placeholder="VMS 정보를 입력해주세요.">
+            <div class="search-btn"></div>
+          </div>
+          <div class="list-result-area">
+            <ul>
+              <li>test</li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!--main content start-->
+    <section id="main-content">
+      <div id="map"></div>
+
+      <!-- 범례 -->
+      <div class="onoff">
+        <div class="onoff-top">
+          범례 ON/OFF
+        </div>
+        <div class="onoff-bottom">
+          <label class="checkbox">
+              <input type="checkbox" value="">
+               <span class="cb"></span>
+               <span>돌발정보</span>
+            </label>
+
+          <label class="checkbox">
+              <input type="checkbox" value="">
+               <span class="cb"></span>
+               주차장
+            </label>
+
+          <label class="checkbox">
+              <input type="checkbox" value="">
+               <span class="cb"></span>
+               CCTV
+            </label>
+
+          <label class="checkbox">
+              <input type="checkbox" value="">
+               <span class="cb"></span>
+               VMS
+            </label>
+        </div>
+      </div>
+
+      <table class="legend">
+        <thead>
+          <tr>
+            <th></th>
+            <th><span class="green"></span>원활</th>
+            <th><span class="yellow"></span>서행</th>
+            <th><span class="red"></span>정체</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>일반도로</td>
+            <td>20km/h이상</td>
+            <td>10-20km/h</td>
+            <td>10km/h미만</td>
+          </tr>
+          <tr>
+            <td>도시고속도로</td>
+            <td>50km/h이상</td>
+            <td>30-50km/h</td>
+            <td>30km/h미만</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <div class="marker" data-popup-open="popup-1"></div>
+
+      <!-- modal영역시작 -->
+      <div class="popup" data-popup="popup-1">
+
+        <div class="popup-title">
+          <span>간석역길</span>
+          <a class="popup-close" data-popup-close="popup-1" href="#"></a>
+        </div>
+        <div class="popup-content">
+          <table class="road-info">
+            <thead>
+              <tr>
+                <th>도로길이</th>
+                <th colspan="2">평균속도</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">3,224 km</td>
+                <td class="top">인천예술고4</td>
+                <td class="top">간석역북측</td>
+              </tr>
+              <tr>
+                <td class="bottom">▼ 15 km/h</td>
+                <td class="bottom">▲ 25 km/h</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="road-detail">
+            <tbody>
+              <tr>
+                <th colspan="4">주안국민은행</th>
+              </tr>
+              <tr>
+                <td class="text"><b>11km/h</b>(2분 41초)</td>
+                <td class="img red-bottom"></td>
+                <td class="img red-top"></td>
+                <td class="text"><b>14km/h</b>(2분 7초)</td>
+              </tr>
+              <tr>
+                <th colspan="4">간석역입구</th>
+              </tr>
+              <tr>
+                <td class="text"><b>23km/h</b>(45초)</td>
+                <td class="img yellow-bottom"></td>
+                <td class="img red-top"></td>
+                <td class="text"><b>11km/h</b>(1분 33초)</td>
+              </tr>
+              <tr>
+                <th colspan="4">간석역북측</th>
+              </tr>
+              <tr>
+                <td class="text"><b>40km/h</b>(2분 29초)</td>
+                <td class="img green-bottom"></td>
+                <td class="img yellow-top"></td>
+                <td class="text"><b>20km/h</b>(57초)</td>
+              </tr>
+              <tr>
+                <th colspan="4">간석시장사거리</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- modal영역끝 -->
+    </section>
+  </section>
+  <footer>
+    <div class="footer-area">
+      <div class="footer-text">
+        인천광역시 남동구 경인로 680번길 25 (간석3동 67-11) | 교통안내 (관제실) 032-455-2153 | 신호등 고장 032-864-6805 | FAX : 032-440-8674
+      </div>
+    </div>
+  </footer>
+  <script>
+    function mapInfo(evt, mapInfo) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(mapInfo).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+
+</html>
