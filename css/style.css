@@ -291,8 +291,11 @@ header {
 .legend th span {
   display: inline-block;
   vertical-align: middle;
-  width: 18px;
-  height: 18px;
+  height: 19px;
+}
+
+.legend th span:first-child {
+  width: 19px;
   border-radius: 10px;
   margin-right: 5px;
 }
