@@ -680,12 +680,12 @@ footer {
   background: url(../images/icon_title_left.png) no-repeat center;
 }
 
-.title-inner .depth1 {
+.title-normal {
   color: #5b5c60;
   font-weight: bold;
 }
 
-.title-inner .depth2 {
+.title-strong {
   color: #000;
   font-weight: bold;
 }
