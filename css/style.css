@@ -291,8 +291,8 @@ header {
 .legend th span {
   display: inline-block;
   vertical-align: middle;
-  width: 19px;
-  height: 19px;
+  width: 18px;
+  height: 18px;
   border-radius: 10px;
   margin-right: 5px;
 }
@@ -593,13 +593,12 @@ header {
   cursor: pointer;
 }
 
-.banner-btn img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+.banner-btn.left {
+  background:url(../images/btn_left.jpg) no-repeat center;
+}
+
+.banner-btn.right {
+  background:url(../images/btn_right.jpg) no-repeat center;
 }
 
 footer {
