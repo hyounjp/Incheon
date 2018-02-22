@@ -161,6 +161,13 @@
   .popup-content {
     height: 200px;
   }
+
+  /* 공지사항 */
+  .board-list td, .board-list th {
+    padding : 5px;
+  }
+
+
 }
 
 @media screen and (max-width: 480px) {
