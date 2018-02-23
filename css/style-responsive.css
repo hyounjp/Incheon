@@ -154,6 +154,12 @@
   .board-list td, .board-list th {
     padding: 5px;
   }
+
+  .center-organ img{
+    width: 90%;
+    margin : 0 5%;
+  }
+
 }
 
 @media screen and (max-width: 480px) {
