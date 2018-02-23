@@ -1198,6 +1198,7 @@ aside {
 /* 센터 소개 */
 .wrapper-sub {
   width: 100%;
+	min-height: 890px;
   padding-bottom: 80px;
   background-color: #fff;
 }
