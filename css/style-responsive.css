@@ -170,9 +170,21 @@
     }
 
   /* 공지사항 */
+  .title-sub {
+    padding-bottom: 10px;
+    height: auto;
+  }
+  .title-sub-text {
+    display: inline-block;
+    width: 100%;
+    margin-left: 40px;
+    margin-top: 5px;
+  }
+
   .board-list td, .board-list th {
     padding : 5px;
   }
+
 
 
 }
