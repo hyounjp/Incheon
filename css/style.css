@@ -1292,6 +1292,12 @@ aside {
   text-align: justify;
 }
 
+.center-intro p:first-child{
+	color: #000;
+  font-size: 23px;
+  font-weight: bold;
+}
+
 .center-history {
   width: 100%;
   font-size: 15px;
@@ -1309,7 +1315,7 @@ aside {
   min-width: 130px;
   padding: 10px;
   background-color: #f4f5f9;
-  border-right : 2px solid #d8d8d8;
+  border-right : 1px solid #d8d8d8;
   border-bottom : 1px solid #d8d8d8;
 }
 
@@ -1430,10 +1436,14 @@ aside {
   font-size: 14px;
 }
 
-.board-list td, .board-list th {
+.board-list td,.board-list th {
   padding: 13px;
   border-right: 1px solid #d0d5d6;
   border-top: 1px solid #d0d5d6;
+}
+
+.board-list th {
+	border-top: 0;
 }
 
 .board-list td:last-child, .board-list th:last-child {
