@@ -13,6 +13,9 @@
 	src:url('../font/NanumGothic-Bold.woff') format('woff'),
 	url('../font/NanumGothic-Bold.ttf') format('truetype');}
 
+
+/* 공통 */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -71,6 +74,9 @@ body {
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 16px;
 }
+
+
+/* 헤더 - 조현정 작성 */
 
 header {
   position: absolute;
@@ -205,8 +211,6 @@ header {
   background-image: url(../images/m_menuicon_close.jpg);
 }
 
-/*nav*/
-
 .nav {
   display: none;
   position: absolute;
@@ -262,7 +266,8 @@ header {
   margin: 0 15px;
 }
 
-/*//nav*/
+
+/* 메인 화면 - 조현정 */
 
 .wrapper {
   position: relative;
@@ -390,7 +395,6 @@ header {
     vertical-align: middle;
     margin-right: 10px;
 }
-
 
 .icon-caution::before{
   background : url(../images/icon_caution.png) no-repeat center ;
@@ -631,14 +635,7 @@ footer {
   text-align: center;
 }
 
-/* 교통정보 서브화면 */
-
-
-#container {
-  position: relative;
-  width: 100%;
-  height: 925px;
-}
+/* 서브화면 공통 */
 
 .title {
   position: relative;
@@ -686,6 +683,16 @@ footer {
   font-weight: bold;
 }
 
+
+/* 교통정보 서브화면 */
+
+#container {
+  position: relative;
+  width: 100%;
+  height: 925px;
+}
+
+
 .tab-button{
   display: none;
   position: absolute;
@@ -698,7 +705,6 @@ footer {
   background-size: cover;
 
 }
-
 
 /* sidebar */
 
@@ -810,7 +816,6 @@ aside {
   background: url(../images/bullet_navy.png) no-repeat 8px 50% #dbe9f4;
 }
 
-/* MAIN CONTENT CONFIGURATION */
 #main-content {
   position: relative;
   float: left;
@@ -917,6 +922,8 @@ aside {
 }
 
 
+/* 팝업 */
+
 .popup {
   display: none;
   position:absolute;
@@ -941,8 +948,6 @@ aside {
   background:#fff;
   box-sizing: content-box;
 }
-
-
 
 .popup-title{
   position: relative;
@@ -1059,7 +1064,7 @@ aside {
 }
 
 
-/* 교통데이터분석 - 교통사고 다발지역 */
+/* 교통데이터분석 - 교통사고 다발지역 조현정 작성 */
 
 .datacontent{
   padding:15px;
