@@ -72,6 +72,12 @@ $(document).ready(function() {
       }
     });
 
+  /* 다른 아이템 클릭 시 열려있는 팝업 닫기 */
+  $('.list-result-area>ul>li').click(function(){
+    $('.popup').css({"display":"none"});
+  });
+
+
 
   $('[data-popup-open]').on('click', function(e) {
     var targeted_popup_class = jQuery(this).attr('data-popup-open');

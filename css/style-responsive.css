@@ -160,15 +160,14 @@
     padding-top: 15px;
   }
 
-  .popup {
-    left:10%;
-    width: 80%;
-    height: 250px;
-  }
+  .popup-inner {
+      width: 80%;
+      height: 300px;
+    }
 
-  .popup-content {
-    height: 200px;
-  }
+    .popup-content {
+      height: 250px;
+    }
 
   /* 공지사항 */
   .board-list td, .board-list th {
